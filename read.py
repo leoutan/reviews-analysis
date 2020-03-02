@@ -13,3 +13,21 @@ for d in data:
 print(sum_len)
 avr_sum = sum_len / len(data)
 print(avr_sum)
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '筆留言長度小於100')
+sum1 = 0
+avg_sum1 = 0
+for n in new:
+	sum1 = sum1 + len(n)
+avg_sum1 = sum1 / len(new)
+
+good = []
+for b in data:
+	if 'good' in b:
+		good.append(b)
+print('一共有', len(good), '筆留言裡面有good')
+print(good[0])
